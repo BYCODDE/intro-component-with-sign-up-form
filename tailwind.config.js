@@ -6,6 +6,10 @@ export default {
       backgroundImage: {
         "mobile-bg": "url('/images/bg-intro-mobile.png')",
       },
+      fontFamily: {
+
+        "poppins": ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
