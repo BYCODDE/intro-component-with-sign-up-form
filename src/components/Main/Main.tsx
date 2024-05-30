@@ -17,8 +17,19 @@ function Main() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setData({ ...data, first_name: "", last_name: "", email: "", password: "" });
-    console.log(data);
+    setData({
+      ...data,
+      first_name: "",
+      last_name: "",
+      email: "",
+      password: "",
+    });
+  };
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setData({
+      ...data,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -32,7 +43,7 @@ function Main() {
             className="w-full p-[15px] border border-gray-300 max-w-[279px] max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
             name="first_name"
             value={data.first_name}
-            onChange={(e) => setData({ ...data, first_name: e.target.value })}
+            onChange={handleChange}
             placeholder="First Name"
           />
 
@@ -40,7 +51,7 @@ function Main() {
             className="w-full p-[15px] border border-gray-300 max-w-[279px] max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
             name="last_name"
             value={data.last_name}
-            onChange={(e) => setData({ ...data, last_name: e.target.value })}
+            onChange={handleChange}
             placeholder="Last Name"
           />
 
@@ -48,7 +59,7 @@ function Main() {
             className="w-full p-[15px] border border-gray-300 max-w-[279px] max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
             name="email"
             value={data.email}
-            onChange={(e) => setData({ ...data, email: e.target.value })}
+            onChange={handleChange}
             placeholder="Email Address"
           />
 
@@ -57,7 +68,7 @@ function Main() {
             type="password"
             name="password"
             value={data.password}
-            onChange={(e) => setData({ ...data, password: e.target.value })}
+            onChange={handleChange}
             placeholder="Password"
           />
         </div>
