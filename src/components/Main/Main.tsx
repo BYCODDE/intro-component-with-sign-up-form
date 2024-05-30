@@ -1,33 +1,63 @@
+import { useState } from "react";
+
+type FormData = {
+  first_name: string;
+  last_name: string;
+  email: string;
+  password: string;
+};
+
 function Main() {
+  const [data, setData] = useState<FormData>({
+    first_name: "",
+    last_name: "",
+    email: "",
+    password: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setData({ ...data, first_name: "", last_name: "", email: "", password: "" });
+    console.log(data);
+  };
+
   return (
     <main>
-      <form className="rounded-[10px]  bg-[#FFF] p-[24px] cursor-pointer">
+      <form
+        onSubmit={handleSubmit}
+        className="rounded-[10px] bg-white p-[24px] cursor-pointer text-[#3D3B48]"
+      >
         <div className="flex justify-center items-center flex-col gap-[16px]">
           <input
-            className="w-full p-[15px] border-[1px] solid #DEDEDE max-w-[279px] max-h-[56px] placeholder:text-[#3D3B48]  placeholder:text-[14px] placeholder:font-[600] placeholder:leading-[26px] placeholder:opacity-75 focus:outline-none   focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
-            id="firstName"
-            name="firstName"
+            className="w-full p-[15px] border border-gray-300 max-w-[279px] max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
+            name="first_name"
+            value={data.first_name}
+            onChange={(e) => setData({ ...data, first_name: e.target.value })}
             placeholder="First Name"
           />
 
           <input
-            className="w-full p-[15px] border-[1px] solid #DEDEDE max-w-[279px] max-h-[56px] placeholder:text-[#3D3B48]  placeholder:text-[14px] placeholder:font-[600] placeholder:leading-[26px] placeholder:opacity-75 focus:outline-none   focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
-            id="lastName"
-            name="lastName"
+            className="w-full p-[15px] border border-gray-300 max-w-[279px] max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
+            name="last_name"
+            value={data.last_name}
+            onChange={(e) => setData({ ...data, last_name: e.target.value })}
             placeholder="Last Name"
           />
 
           <input
-            className="w-full p-[15px] border-[1px] solid #DEDEDE max-w-[279px] max-h-[56px] placeholder:text-[#3D3B48]  placeholder:text-[14px] placeholder:font-[600] placeholder:leading-[26px] placeholder:opacity-75 focus:outline-none   focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
-            id="email"
+            className="w-full p-[15px] border border-gray-300 max-w-[279px] max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
             name="email"
+            value={data.email}
+            onChange={(e) => setData({ ...data, email: e.target.value })}
             placeholder="Email Address"
           />
 
           <input
-            className="w-full p-[15px] border-[1px] solid #DEDEDE max-w-[279px] max-h-[56px] placeholder:text-[#3D3B48]  placeholder:text-[14px] placeholder:font-[600] placeholder:leading-[26px] placeholder:opacity-75 focus:outline-none   focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
-            id="password"
+            className="w-full p-[15px] border border-gray-300 max-w-[279px] max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px]"
+            type="password"
             name="password"
+            value={data.password}
+            onChange={(e) => setData({ ...data, password: e.target.value })}
             placeholder="Password"
           />
         </div>
