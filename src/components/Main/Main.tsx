@@ -88,7 +88,9 @@ function Main() {
                   ? "border-[#FF7979] placeholder:text-[#FF7979]"
                   : "border-gray-300"
               }`}
-              placeholder={errors.email ? "email@example/com" : "Email Address"}
+              placeholder={
+                errors.email ? "email@example/com" : emailPlaceholder
+              }
               {...register("email", {
                 required: "Looks like this is not an email",
                 pattern: {
