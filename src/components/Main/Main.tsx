@@ -11,7 +11,7 @@ type FormData = {
 function Main() {
   const [emailPlaceholder, setEmailPlaceholder] = useState("Email Address");
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmailPlaceholder("Email Address"); // Reset placeholder when user starts typing
+    setEmailPlaceholder("Email Address");
     setValue("email", e.target.value, { shouldValidate: true });
   };
 
@@ -29,13 +29,17 @@ function Main() {
   };
 
   return (
-    <main>
+    <main className="xl:min-w-[525px]   max-w-[327px]">
+      <div className="hidden lg:block  rounded-[10px] bg-[#5E54A4]  max-h-[88px] font-[400] text-[15px] leading-[26px] p-[18px] shadow-custom  mb-[24px] cursor-pointer">
+        <span className="font-bold">Try it free 7 days </span> then $20/mo.
+        thereafter
+      </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="rounded-[10px] bg-white p-[24px] cursor-pointer text-[#3D3B48]"
       >
         <div className="flex justify-center items-center flex-col gap-[16px]">
-          <div className="relative w-full max-w-[279px]">
+          <div className="xl:max-w-[525px]     relative w-full max-w-[279px]">
             <input
               className={`w-full p-[15px] border max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px] ${
                 errors.first_name ? "border-[#FF7979]" : "border-gray-300"
@@ -58,7 +62,7 @@ function Main() {
               </>
             )}
           </div>
-          <div className="relative w-full max-w-[279px]">
+          <div className="xl:max-w-[525px]       relative w-full max-w-[279px]">
             <input
               className={`w-full p-[15px] border max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px] ${
                 errors.last_name ? "border-[#FF7979]" : "border-gray-300"
@@ -81,7 +85,7 @@ function Main() {
               </>
             )}
           </div>
-          <div className="relative w-full max-w-[279px]">
+          <div className="xl:max-w-[525px]       relative w-full max-w-[279px]">
             <input
               className={`w-full p-[15px] border max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px] ${
                 errors.email
@@ -113,7 +117,7 @@ function Main() {
               </>
             )}
           </div>
-          <div className="relative w-full max-w-[279px]">
+          <div className="  xl:max-w-[525px]     relative w-full max-w-[279px]">
             <input
               className={`w-full p-[15px] border max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px] ${
                 errors.password ? "border-[#FF7979]" : "border-gray-300"
@@ -139,14 +143,16 @@ function Main() {
           </div>
         </div>
         <button
-          className="bg-[#38CC8B] text-[15px] p-[15px] font-[600] rounded-[5px] shadow-custom2 w-full max-w-[279px] max-h-[56px] mt-[16px] mb-[8px]"
+          className="xl:max-w-[525px]    bg-[#38CC8B] text-[15px] p-[15px] font-[600] rounded-[5px] shadow-custom2 w-full max-w-[279px] max-h-[56px] mt-[16px] mb-[8px]"
           type="submit"
         >
           CLAIM YOUR FREE TRIAL
         </button>
-        <p className="text-[11px] text-[#BAB7D4] font-medium leading-[21px] flex flex-col">
+        <p className="xl:tracking-[0.5px] xl:justify-center xl:items-center xl:flex-row text-[11px] text-[#BAB7D4] font-medium leading-[21px] flex flex-col">
           By clicking the button, you are agreeing to our
-          <span className="text-[#FF7979] font-bold">Terms and Services</span>
+          <span className="text-[#FF7979] font-bold ml-1">
+            Terms and Services
+          </span>
         </p>
       </form>
     </main>
