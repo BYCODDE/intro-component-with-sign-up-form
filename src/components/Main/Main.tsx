@@ -29,7 +29,7 @@ function Main() {
   };
 
   return (
-    <main className="xl:min-w-[525px]   max-w-[327px]">
+    <main className="lg:min-w-[525px]   max-w-[327px]">
       <div className="hidden lg:block  rounded-[10px] bg-[#5E54A4]  max-h-[88px] font-[400] text-[15px] leading-[26px] p-[18px] shadow-custom  mb-[24px] cursor-pointer">
         <span className="font-bold">Try it free 7 days </span> then $20/mo.
         thereafter
@@ -39,7 +39,7 @@ function Main() {
         className="rounded-[10px] bg-white p-[24px] cursor-pointer text-[#3D3B48]"
       >
         <div className="flex justify-center items-center flex-col gap-[16px]">
-          <div className="xl:max-w-[525px]     relative w-full max-w-[279px]">
+          <div className="lg:max-w-[525px]     relative w-full max-w-[279px]">
             <input
               className={`w-full p-[15px] border max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px] ${
                 errors.first_name ? "border-[#FF7979]" : "border-gray-300"
@@ -51,7 +51,7 @@ function Main() {
             />
             {errors.first_name && (
               <>
-                <p className="ml-[7rem] mt-[6px] text-[11px] text-[#FF7979]">
+                <p className="lg:ml-[20rem]  ml-[7rem] mt-[6px] text-[11px] text-[#FF7979]">
                   {errors.first_name.message}
                 </p>
                 <img
@@ -62,7 +62,7 @@ function Main() {
               </>
             )}
           </div>
-          <div className="xl:max-w-[525px]       relative w-full max-w-[279px]">
+          <div className="lg:max-w-[525px]       relative w-full max-w-[279px]">
             <input
               className={`w-full p-[15px] border max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px] ${
                 errors.last_name ? "border-[#FF7979]" : "border-gray-300"
@@ -74,7 +74,7 @@ function Main() {
             />
             {errors.last_name && (
               <>
-                <p className="ml-[7rem] mt-[6px] text-[11px] text-[#FF7979]">
+                <p className="lg:ml-[20rem]  ml-[7rem] mt-[6px] text-[11px] text-[#FF7979]">
                   {errors.last_name.message}
                 </p>
                 <img
@@ -85,7 +85,7 @@ function Main() {
               </>
             )}
           </div>
-          <div className="xl:max-w-[525px]       relative w-full max-w-[279px]">
+          <div className="lg:max-w-[525px]       relative w-full max-w-[279px]">
             <input
               className={`w-full p-[15px] border max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px] ${
                 errors.email
@@ -106,7 +106,7 @@ function Main() {
             />
             {errors.email && (
               <>
-                <p className="ml-[7rem] mt-[6px] text-[11px] text-[#FF7979]">
+                <p className="lg:ml-[19rem]  ml-[7rem] mt-[6px] text-[11px] text-[#FF7979]">
                   {errors.email.message}
                 </p>
                 <img
@@ -117,7 +117,7 @@ function Main() {
               </>
             )}
           </div>
-          <div className="  xl:max-w-[525px]     relative w-full max-w-[279px]">
+          <div className="  lg:max-w-[525px]     relative w-full max-w-[279px]">
             <input
               className={`w-full p-[15px] border max-h-[56px] placeholder-custom focus:outline-none focus:border-1 focus:border-solid focus:border-[#5E54A4] rounded-[5px] ${
                 errors.password ? "border-[#FF7979]" : "border-gray-300"
@@ -130,7 +130,7 @@ function Main() {
             />
             {errors.password && (
               <>
-                <p className="ml-[7rem] mt-[6px] text-[11px] text-[#FF7979]">
+                <p className="lg:ml-[20rem] ml-[7rem] mt-[6px] text-[11px] text-[#FF7979]">
                   {errors.password.message}
                 </p>
                 <img
@@ -143,12 +143,12 @@ function Main() {
           </div>
         </div>
         <button
-          className="xl:max-w-[525px]    bg-[#38CC8B] text-[15px] p-[15px] font-[600] rounded-[5px] shadow-custom2 w-full max-w-[279px] max-h-[56px] mt-[16px] mb-[8px]"
+          className="lg:max-w-[525px]    bg-[#38CC8B] text-[15px] p-[15px] font-[600] rounded-[5px] shadow-custom2 w-full max-w-[279px] max-h-[56px] mt-[16px] mb-[8px]"
           type="submit"
         >
           CLAIM YOUR FREE TRIAL
         </button>
-        <p className="xl:tracking-[0.5px] xl:justify-center xl:items-center xl:flex-row text-[11px] text-[#BAB7D4] font-medium leading-[21px] flex flex-col">
+        <p className="lg:tracking-[0.5px] lg:justify-center lg:items-center lg:flex-row text-[11px] text-[#BAB7D4] font-medium leading-[21px] flex flex-col">
           By clicking the button, you are agreeing to our
           <span className="text-[#FF7979] font-bold ml-1">
             Terms and Services

@@ -1,10 +1,10 @@
 function Header() {
   return (
-    <header className="xl:max-w-[525px] max-w-[327px] ">
-      <h1 className="xl:leading-[56px]   xl:text-[50px]  text-[28px] font-bold  leading-[36px]">
+    <header className="lg:max-w-[525px] max-w-[327px] ">
+      <h1 className="lg:leading-[56px]   lg:text-[50px]  text-[28px] font-bold  leading-[36px]">
         Learn to code by watching others
       </h1>
-      <p className="  xl:text-[16px]  text-[14px] font-medium leading-[26px] mt-[16px] mb-[64px]">
+      <p className="  lg:text-[16px]  text-[14px] font-medium leading-[26px] mt-[16px] mb-[64px]">
         See how experienced developers solve problems in real-time. Watching
         scripted tutorials is great, but understanding how developers think is
         invaluable.
